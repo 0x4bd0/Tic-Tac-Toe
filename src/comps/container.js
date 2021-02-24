@@ -3,8 +3,10 @@ import { calculateWinner } from "../functions/checkWinner";
 import Board from "./board";
 
 const Container = () => {
+    const defaultScore =  [{player:"Player X",score:0}, {player:"Player O",score:0}, {player: "Draw", score: 0}]
+
     const [board,setBoard]  = useState(Array(9).fill(null))
-    const [score,setScore] = useState([ {player:"Player X",score:0}, {player:"Player O",score:0}, {player: "Draw", score: 0}])
+    const [score,setScore] = useState(defaultScore)
     const [round,setRound] = useState(0)
     const input =  round%2 === 0 ? 'X' : 'O'
 
@@ -12,7 +14,7 @@ const Container = () => {
 
     useEffect(()=>{
         if(winner ) {
-            alert(winner + 'Wins!')
+            alert(`Player ${winner} Wins this one ! `)
             // i know that this is bad too much fking code, but i'm too fking lazy to fix this, so i will just leave it like this, since it's just a fun project
             if(winner == "X"){
                 let index = score.findIndex(item=>item.player == "Player X")
@@ -41,9 +43,16 @@ const Container = () => {
         setBoard(tmp)
         setRound(round+1)
     } 
-
+    
+    const reset = () => {
+        setScore(defaultScore)
+        setRound(0)
+        setBoard(Array(9).fill(null))
+        alert('Starting a new game !')
+    }
+ 
     return ( 
-        <Board boxs={board} check={check} score={score}></Board>
+        <Board boxs={board} check={check} score={score} reset={reset}></Board>
      );
 }
  

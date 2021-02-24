@@ -1,6 +1,6 @@
 import Box from "./box"
 
-const Board = ({boxs,check,score}) => {
+const Board = ({boxs,check,score,reset}) => {
     return ( 
         <div className="board-container">
             <h1>Tic Tac Toe Game</h1>
@@ -18,6 +18,7 @@ const Board = ({boxs,check,score}) => {
                 ))
             }
         </div>
+        <button className="resetBtn" onClick={reset}>Reset</button>
         </div>
 
      );
