@@ -4,6 +4,7 @@ import Board from "./board";
 
 const Container = () => {
     const [board,setBoard]  = useState(Array(9).fill(null))
+    const [score,setScore] = useState([ {player:"X",score:0}, {player:"O",score:0}, {player: "D", score: 0}])
     const [round,setRound] = useState(0)
     const input =  round%2 === 0 ? 'X' : 'O'
 
@@ -29,7 +30,7 @@ const Container = () => {
     } 
 
     return ( 
-        <Board boxs={board} check={check}></Board>
+        <Board boxs={board} check={check} score={score}></Board>
      );
 }
  

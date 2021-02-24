@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:black;
 }
 
 code {
@@ -12,33 +13,61 @@ code {
     monospace;
 }
 
-
 .board {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 70%;
-  width: 70%;
+  padding: 0;
+  flex-direction: row;
+  margin: 0 auto;
+  height: 60vh;
+  width: 60vw;
+}
+
+.score {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.score p {
+  padding: 0 1vw;
 }
 
 .box {
   flex: 33%;
   padding: 50px;
+  border: 3px solid #00c79f69;
+  background-color: #090b0ce6;
+}
+
+
+.box:disabled {
+  border: 3px solid #00c79f69;
+  background-color: #090b0ce6;
 }
 
 
 .X {
   color: green;
-    font-size: 10vw;
+    font-size: 8vh;
     padding: 0;
 }
 
 .O {
   color:red;
-    font-size: 10vw;
+   font-size: 8vh;
     padding: 0;
 }
+
+
+.board-container {
+  color: white;
+  text-align: center;
+  font-size: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+
