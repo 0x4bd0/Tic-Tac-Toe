@@ -1,7 +1,9 @@
+import Container from "./comps/container";
 
 function App() {
   return (
     <div className="App">
+      <Container></Container>
     </div>
   );
 }

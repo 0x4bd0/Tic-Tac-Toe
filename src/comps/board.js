@@ -4,9 +4,9 @@ const Board = ({boxs,check}) => {
     return ( 
         <div className="board">
             {
-                boxs.map((item,i)=>{
-                    <Box  key={index} value={item}  onClick={()=>{check}}></Box>
-                })
+                boxs.map((item,index)=>(
+                    <Box  key={index} value={item}  onClick={()=>{check(index)}}></Box>
+                ))
             }
         </div>
      );
