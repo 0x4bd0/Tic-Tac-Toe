@@ -52,7 +52,7 @@ const Container = () => {
     }
  
     return ( 
-        <Board boxs={board} check={check} score={score} reset={reset}></Board>
+        <Board boxs={board} check={check} score={score} reset={reset} turn={input}></Board>
      );
 }
  

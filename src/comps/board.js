@@ -1,9 +1,10 @@
 import Box from "./box"
 
-const Board = ({boxs,check,score,reset}) => {
+const Board = ({boxs,check,score,reset,turn}) => {
     return ( 
         <div className="board-container">
             <h1>Tic Tac Toe Game</h1>
+            <h2>{` It's ${turn} turn. `}</h2>
             <div className="score">
                 {
                     score.map((item,i)=>(
