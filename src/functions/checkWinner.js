@@ -18,6 +18,6 @@ const  calculateWinner = (squares)  => {
     return null;
   }
 
-  module.exports = {
+  export default  {
       calculateWinner
   }
