@@ -7,7 +7,7 @@ const Board = ({boxs,check,score}) => {
             <div className="score">
                 {
                     score.map((item,i)=>(
-                        <p key={i}> {item.player + ':' + item.score}  </p>
+                        <p key={i}> {`  ${item.player } :  ${item.score}`  }  </p>
                     ))
                 }
             </div>
