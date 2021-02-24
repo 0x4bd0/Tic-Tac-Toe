@@ -5,7 +5,7 @@ import Board from "./board";
 const Container = () => {
     const [board,setBoard]  = useState(Array(9).fill(null))
     const [round,setRound] = useState(0)
-    const input =  round%2 === 0 ? 'X' : '0'
+    const input =  round%2 === 0 ? 'X' : 'O'
 
     const winner = calculateWinner(board)
 

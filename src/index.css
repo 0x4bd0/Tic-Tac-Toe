@@ -29,3 +29,16 @@ code {
   flex: 33%;
   padding: 50px;
 }
+
+
+.X {
+  color: green;
+    font-size: 10vw;
+    padding: 0;
+}
+
+.O {
+  color:red;
+    font-size: 10vw;
+    padding: 0;
+}
