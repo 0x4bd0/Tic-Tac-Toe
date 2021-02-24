@@ -5,7 +5,7 @@ const Board = ({boxs,check}) => {
         <div className="board">
             {
                 boxs.map((item,index)=>(
-                    <Box  key={index} value={item}  onClick={()=>{check(index)}}></Box>
+                    <Box  key={index} value={item}  check={check} index={index}></Box>
                 ))
             }
         </div>

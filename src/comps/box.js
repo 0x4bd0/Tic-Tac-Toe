@@ -1,10 +1,10 @@
 
-const Box = ({value,check}) => {
+const Box = ({value,index,check}) => {
 
     const styly = value ?  `box ${value}` : 'box'
     
     return ( 
-        <button className={styly} onClick={check}>
+        <button className={styly} onClick={()=>{check(index)}}>
               {value}
         </button>
      );
